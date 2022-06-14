@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./res.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <!-- https://newsake.vn/gioi-thieu/ tham khao hinh anh-->
+  <body>
+    <!-- header  -->
+    <header id="header">
+      <div class="container">
+        <div class="row justify-content align-center">
+          <div class="header_logo">
+            <a href="/">
+              <img
+                src="./image/duong-restaurant-logo-white.png"
+                alt="img-logo"
+              />
+            </a>
+          </div>
+
+          <ul class="header_menu">
+            <li><a href="/" alt="">Trang chủ</a></li>
+            <li> <a href="#about" alt="">About</a></li>
+            <li><a href="#menu" alt="">Thực đơn</a> </li>
+            <li><a href="#feedback" alt="">Phản hồi</a></li>
+            <li><a href="tel:0123456789">Liên hệ</a>
+
+          </ul>
+
+          <div class="header_icon">
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              data-prefix="fas"
+              data-icon="bars"
+              class="svg-inline--fa fa-bars fa-w-14"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <nav class="nav__mobile">
+        <div class="nav__mobile-close">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="times"
+            class="svg-inline--fa fa-times fa-w-11"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 352 512"
+          >
+            <path
+              fill="currentColor"
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            ></path>
+          </svg>
+        </div>
+        <ul class="nav__mobile-list">
+          <li><a href="/" alt="">Trang chủ</a></li>
+          <li> <a href="#about" alt="">About</a></li>
+          <li><a href="#menu" alt="">Thực đơn</a> </li>
+          <li><a href="#feedback" alt="">Phản hồi</a></li>
+          <li><a href="" alt="">Liên hệ</a></li>
+          <li><a href="tel:0123456789">Hotline: 0123-456-789</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <!-- banner-bigImage -->
+    <section class="big_image">
+      <div
+        class="big_image-content"
+        data-aos="fade-up"
+        data-aos-duration="2500"
+      >
+        <h2>NHÀ HÀNG NHẬT BẢN</h2>
+        <p>Tinh hoa ẩm thực Nhật giữa lòng Hà Nội</p>
+        <button class="big_image-content-btn btn">RESERVE NOW</button>
+
+        <span>Open hours: Mon - Sun: 11:30 am - 20:30 pm</span>
+      </div>
+    </section>
+    <!-- modal -->
+    <div class="modal hiden">
+      <div class="modal-iner">
+        <div class="modal-header">
+          <span class="">RESERVE NOW</span>
+          <i class="fas fa-times icon-close"></i>
+        </div>
+        <div class="modal-container">
+          <span>Name</span>
+          <input type="text" />
+          <span>Phone number</span>
+          <input type="text" />
+          <button>Send</button>
+        </div>
+      </div>
+    </div>
+    <!-- about  -->
+    <section id="about" class="section-pading">
+      <div class="container">
+        <div class="section-title">
+          <h2 data-title="Câu chuyện">Về chúng tôi</h2>
+        </div>
+        <div class="row">
+          <div
+            class="about-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <h2>ShuShi HaNoi</h2>
+            <p>
+              Chuỗi hệ thống Nhà hàng là một trong những Nhà hàng mang phong
+              cách Nhật Bản đến tới Hà Nội và Việt Nam. Tọa lạc tại những địa
+              điểm đẹp, Sushi HaNoi là một trong những Nhà hàng có tầm nhìn đẳng
+              cấp khi đem đến nền văn hóa và ẩm thực thu nhỏ của Nhật Bản giữa
+              lòng Hà Nội. Với không gian sang trọng, ấm cúng cùng hệ thống
+              phòng riêng cao cấp, dịch vụ đa dạng chuyên nghiệp, Sushi HaNoi
+              chắc chắn sẽ là điểm đến lý tưởng dành cho những tín đồ đam mê ẩm
+              thực Nhật Bản.
+            </p>
+            <button class="btn"> <a href="#menu"> Xem Menu </a></button>
+          </div>
+          <div class="about-item" data-aos="fade-left" data-aos-duration="2000">
+            <div class="about-item-img">
+              <span>Hơn 10 năm kinh nghiệm</span>
+              <img
+                src="https://duongsrestaurant.com/wp-content/uploads/2020/11/Hanoi-Restaurant.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- slide image  -->
+        <div class="about_wraper">
+          <!-- iteam img -->
+          <div class="about_image">
+            <img src="./image/nha-hang-nhat-6.jpg" alt="" class="" />
+          </div>
+          <!-- iteam img -->
+          <div class="about_image">
+            <img src="./image/nha-hang-nhat-9.jpg" alt="" class="" />
+          </div>
+          <!-- iteam img -->
+          <div class="about_image">
+            <img src="./image/nha-hang-nhat-3.jpg" alt="" class="" />
+          </div>
+          <!-- iteam img -->
+          <div class="about_image">
+            <img src="./image/nha-hang-nhat-8.jpg" alt="" class="" />
+          </div>
+          <!-- iteam img -->
+          <div class="about_image">
+            <img src="./image/nha-hang-nhat-7.jpg" alt="" class="" />
+          </div>
+          <!-- iteam img -->
+          <div class="about_image">
+            <img src="./image/nha-hang-nhat-1.jpg" alt="" class="" />
+          </div>
+        </div>
+
+        <div class="about_gallery">
+          <div class="about_gallery__inner">
+            <img src="./image/img3.jpeg" alt="" />
+          </div>
+          <div class="about_gallery_control prev">
+            <i class="fas fa-chevron-left"></i>
+          </div>
+          <div class="about_gallery_control next">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <div class="about_gallery__close">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- menu  -->
+    <section id="menu" class=" section-pading">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 data-title="Đặt ngay">Thực đơn</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="menu-title">
+            <button class="menu-button active" data-title="#sushi">
+              Sushi
+            </button>
+            <button class="menu-button" data-title="#torikiku">Đồ nướng</button>
+            <button class="menu-button" data-title="#do-uong">Đồ uống</button>
+            <button class="menu-button" data-title="#khac">Khác</button>
+          </div>
+        </div>
+        <div class="row justify-content">
+          <!-- sushi -->
+          <div class="menu-item-content active" id="sushi">
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/Sushi.jpg" alt="" />
+                <span>Sushi</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/Sushi1.jpg" alt="" />
+                <span>Sushi</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/Sushi2.jpg" alt="" />
+                <span>Sushi</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/Sushi3.jpg" alt="" />
+                <span>Sushi</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/Sushi4.jpg" alt="" />
+                <span>Sushi</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/Sushi5.jpg" alt="" />
+                <span>Sushi</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+          </div>
+          <!-- chieu -->
+          <div class="menu-item-content" id="torikiku">
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/ikinari.jpg" alt="" />
+                <span> Đồ nướng</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/ikinari1.jpg" alt="" />
+                <span> Đồ nướng</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/ikinari2.jpg" alt="" />
+                <span> Đồ nướng</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/ikinari3.jpg" alt="" />
+                <span> Đồ nướng</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/ikinari4.jpg" alt="" />
+                <span> Đồ nướng</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/ikinari5.jfif" alt="" />
+                <span> Đồ nướng</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+          </div>
+          <!-- do uong  -->
+          <div class="menu-item-content" id="do-uong">
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/dorinku.jfif" alt="" />
+                <span>Đô uống</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/dorinku1.jpg.crdownload" alt="" />
+                <span>Đô uống</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/dorinku2.jpg" alt="" />
+                <span>Đô uống</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/dorinku3.jpg" alt="" />
+                <span>Đô uống</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/dorinku4.avif" alt="" />
+                <span>Đô uống</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img src="./image/dorinku5.jpg" alt="" />
+                <span>Đô uống</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+          </div>
+          <!-- diem tam  -->
+          <div class="menu-item-content" id="khac">
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img
+                  src="https://hatoyama.vn/wp-content/uploads/2012/10/ssm-bung-cangu.jpg"
+                  alt=""
+                />
+                <span>Điểm tâm</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img
+                  src="https://hatoyama.vn/wp-content/uploads/2012/10/ssm-bung-cangu.jpg"
+                  alt=""
+                />
+                <span>Điểm tâm</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+
+            <div class="food-items">
+              <div class="food-item">
+                <img
+                  src="https://hatoyama.vn/wp-content/uploads/2012/10/ssm-bung-cangu.jpg"
+                  alt=""
+                />
+                <span>Điểm tâm</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+
+            <div class="food-items">
+              <div class="food-item">
+                <img
+                  src="https://hatoyama.vn/wp-content/uploads/2012/10/ssm-bung-cangu.jpg"
+                  alt=""
+                />
+                <span>Điểm tâm</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img
+                  src="https://hatoyama.vn/wp-content/uploads/2012/10/ssm-bung-cangu.jpg"
+                  alt=""
+                />
+                <span>Điểm tâm</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+
+            <!-- food-item       -->
+            <div class="food-items">
+              <div class="food-item">
+                <img
+                  src="https://hatoyama.vn/wp-content/uploads/2012/10/ssm-bung-cangu.jpg"
+                  alt=""
+                />
+                <span>Điểm tâm</span>
+              </div>
+              <div class="food-price">
+                <span>150.000 VND</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--image menu  -->
+    <section class="layout-images">
+      <div class="container">
+        <div class="images">
+          <div class="image-item" data-aos="fade-left" data-aos-duration="2000">
+            <img src="./image/Sushi4.jpg" alt="" />
+          </div>
+          <div class="image-item" data-aos="fade-up" data-aos-duration="2000">
+            <img src="image/dorinku2.jpg" alt="" />
+          </div>
+          <div class="image-item" data-aos="fade-up" data-aos-duration="2000">
+            <img src="image/ikinari4.jpg" alt="" />
+          </div>
+          <div class="image-item" data-aos="fade-down" data-aos-duration="2000">
+            <img src="image/Sushi3.jpg" alt="" />
+          </div>
+          <div class="image-item" data-aos="fade-down" data-aos-duration="2000">
+            <img src="image/dorinku.jfif" alt="" />
+          </div>
+          <div
+            class="image-item"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
+            <img src="image/ikinari2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- phản hồi  -->
+    <section id="feedback" class="section-pading">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 data-title="Ý kiến">Đánh giá</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="feedback-items">
+            <!-- feedback item -->
+            <div
+              class="feedback-item"
+              data-aos="flip-left"
+              data-aos-duration="2000"
+            >
+              <div class="feedback-contact">
+                <div class="feedback-contact-name">
+                  <h2>Tố Uyên</h2>
+                  <span>Food Specialist</span>
+                </div>
+                <div class="feedback-contact-image">
+                  <img
+                    src="https://2sao.vietnamnetjsc.vn/images/2017/09/10/09/04/idol-han-quoc-1.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="feedback-decs">
+                <p>
+                  Những ăn độc đáo tại Hatoyama được chế biến bởi Chef Kyo
+                  Nguyen – đầu bếp hơn 20 năm kinh nghiệm với khoảng thời gian
+                  dài tu nghiệp tại Nhật. Chef Kyo Nguyen đã từng phục vụ nguyên
+                </p>
+              </div>
+              <div class="feedback-star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <!-- feedback item -->
+            <div
+              class="feedback-item"
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              <div class="feedback-contact">
+                <div class="feedback-contact-name">
+                  <h2>Oppa Gangnam</h2>
+                  <span>Food Specialist</span>
+                </div>
+                <div class="feedback-contact-image">
+                  <img src="./image/oppa-gangnam.png" alt="" />
+                </div>
+              </div>
+              <div class="feedback-decs">
+                <p>
+                  Những món ăn độc đáo tại Hatoyama được chế biến bởi Chef Kyo
+                  Nguyen – đầu bếp hơn 20 năm kinh nghiệm với khoảng thời gian
+                  dài tu nghiệp tại Nhật. Chef Kyo Nguyen đã từng phục vụ nguyên
+                </p>
+              </div>
+              <div class="feedback-star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <!-- feedback item -->
+            <div
+              class="feedback-item"
+              data-aos="flip-right"
+              data-aos-duration="2000"
+            >
+              <div class="feedback-contact">
+                <div class="feedback-contact-name">
+                  <h2>Baby Baby</h2>
+                  <span>Food Specialist</span>
+                </div>
+                <div class="feedback-contact-image">
+                  <img src="./image/baby.jpg" alt="" />
+                </div>
+              </div>
+              <div class="feedback-decs">
+                <p>
+                  Những món ăn độc đáo tại Hatoyama được chế biến bởi Chef Kyo
+                  Nguyen – đầu bếp hơn 20 năm kinh nghiệm với khoảng thời gian
+                  dài tu nghiệp tại Nhật. Chef Kyo Nguyen đã từng phục vụ nguyên
+                </p>
+                <p>
+                  Những món ăn độc đáo tại Hatoyama được chế biến bởi Chef Kyo
+                  Nguyen – đầu bếp hơn 20 năm kinh nghiệm với khoảng thời gian
+                  dài tu nghiệp tại Nhật. Chef Kyo Nguyen đã từng phục vụ nguyên
+                </p>
+              </div>
+              <div class="feedback-star">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--my team -->
+    <div id="team" class="section-pading">
+      <div class="container">
+        <div class="row">
+          <div class="section-title">
+            <h2 data-title="Đầu bếp đến từ">Japan</h2>
+          </div>
+        </div>
+
+        <div class="row justify-content">
+          <div class="team-items">
+            <img src="./image/dau-bep-Yoshihiro-Murata.jpg" alt="" />
+            <div class="team-items-text">
+              <h2>Yoshihiro</h2>
+              <span>Tokyo</span>
+            </div>
+          </div>
+          <div class="team-items">
+            <img src="./image/chef-japan.jpg" alt="" />
+            <div class="team-items-text">
+              <h2>Tanaka Muro</h2>
+              <span>Osaka</span>
+            </div>
+          </div>
+          <div class="team-items">
+            <img src="./image/chef-yamato.jpg" alt="" />
+            <div class="team-items-text">
+              <h2>Matsumoto</h2>
+              <span>Okinawa</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer  -->
+    <footer class="footer">
+      <div class="footer-bg"></div>
+      <div class="container">
+        <div class="row justify-content">
+          <div class="footer-item">
+            <div class="footer-logo">
+              <a href="/">
+                <img
+                  src="./image/duong-restaurant-logo-white.png"
+                  alt="img-logo"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="footer-item-contact">
+            <h2>Liên hệ</h2>
+            <a href="tel:0123456789">
+              <i class="fa-solid fa-phone"></i>
+              <p>0123-456-789</p>
+            </a>
+            <a href="mailto:info@me.com">
+              <i class="fa-solid fa-envelope"></i>
+              <p>info@me.com</p>
+            </a>
+            <a href="">
+              <i class="fa-solid fa-location-dot"></i>
+              <p>Address: Kim Mã, Ba Đình, Hà Nội</p>
+            </a>
+          </div>
+        </div>
+        <div class="footer-copyright">
+          © Restaurant 1990. All Rights Reserved
+        </div>
+        <div class="footer-socical">
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+    </footer>
+    <!--  Scroll Down  -->
+    <button id="btnGoTop" title="Go to top">
+      <i class="fa-solid fa-angles-up"></i>
+    </button>
+
+    <script src="./main.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
