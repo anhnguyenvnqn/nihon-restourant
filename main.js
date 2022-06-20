@@ -1,15 +1,15 @@
 const headerIcon = document.querySelector(".header_icon")
 const navMobile = document.querySelector(".nav__mobile")
-const navMobileClose = document.querySelector(".nav__mobile-close")
+const navMobileClose = document.querySelector(".nav__mobile-header-close")
 
 headerIcon.addEventListener("click" , function () {
   navMobile.style.display= "block";
- 
-
+  
+  
 })
 navMobileClose.addEventListener("click", function () {
   navMobile.style.display= "none";
-
+  
 })
 
 // const toP = this.document.querySelector(".top");

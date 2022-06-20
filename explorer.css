@@ -1,0 +1,149 @@
+:root {
+  --main-color: #192139;
+  --sub-color: #eaa023;
+  --text-color: #fff;
+  --bgMenu-color: #0c1023;
+}
+
+/* banner  big-image  */
+.explorer_big_image {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: url(./image/vietnam.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.explorer_big_image::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1;
+  opacity: 0.3;
+}
+.explorer_big_image.japan {
+  background-image: url(./image/japan.jpg);
+}
+.explorer_big_image.china {
+  background-image: url(./image/china.jpg);
+}
+
+.country__name {
+  position: relative;
+  font-weight: 400;
+  font-size: 42px;
+  padding: 16px;
+}
+.country__name::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 25.6vw;
+  height: 1.6vh;
+  left: 0;
+  transform: translate(50%, -50%);
+  background: url(./image/hr-line.png) center no-repeat;
+  background-size: cover;
+}
+.country__name::after {
+  content: "";
+  width: 25.6vw;
+  height: 1.6vh;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  background: url(./image/hr-line.png) center no-repeat;
+  background-size: cover;
+}
+.explorer_big_image-content {
+  z-index: 2;
+  height: 50%;
+  margin: 180px 0;
+}
+
+.explorer_big_image-content p {
+  width: 60%;
+  margin: auto;
+  font-size: 20px;
+  padding-bottom: 60px;
+}
+.country_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 90px;
+  margin: auto;
+  border: none;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+}
+.country_details::before {
+  position: relative;
+  z-index: 3;
+  display: block;
+  content: "";
+  width: 54px;
+  height: 54px;
+  transform-origin: center;
+  background: url(./image/detail-btn.png) center no-repeat;
+  background-size: 100% auto;
+}
+.country_details::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 54px;
+  background: url(./image/detail-btn-effect.png) center no-repeat;
+  background-size: cover;
+  transform-origin: center;
+  animation: wave 2s linear infinite;
+}
+@keyframes wave {
+  0% {
+    transform: scale(0.5);
+  }
+
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(0);
+
+  }
+}
+
+/* footer  */
+.explorer_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #111;
+  height: 250px;
+  padding: 80px;
+}
+.explorer_footer h2 {
+  font-size: 32px;
+  padding: 10px 0;
+}
+.explorer_footer-socical i {
+  font-size: 24px;
+  padding: 6px 12px;
+}
+.explorer_footer-socical i:hover {
+  color: var(--sub-color);
+  cursor: pointer;
+}
