@@ -181,7 +181,7 @@
     z-index: 10;
   }
   .feedback-items {
-    flex-direction: column;
+   
   }
   .feedback-item {
     margin-bottom: 8px;
