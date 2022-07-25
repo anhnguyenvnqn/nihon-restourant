@@ -70,13 +70,16 @@ curentIndex = 0;
 function showGallery() {
   galleryImg.src = images[curentIndex].src;
   gallery.classList.add("show");
+  
   if (curentIndex == 0) {
     prev.classList.add("hide");
   } else prev.classList.remove("hide");
+
   if (curentIndex == images.length - 1) {
     next.classList.add("hide");
   } else next.classList.remove("hide");
 }
+
 images.forEach(function (item, index) {
   item.addEventListener("click", function () {
     console.log(index);
