@@ -15,6 +15,9 @@
   color: var(--text-color);
   
 }
+html {
+  scroll-behavior: smooth;
+}
 ul {
   list-style: none;
 }
@@ -338,7 +341,7 @@ a {
 .section-title {
   width: 100%;
   text-align: center;
-  margin-bottom: 30px;
+  margin: 50px 0;
 }
 .section-title h2 {
   font-size: 46px;
